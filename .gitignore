@@ -2,3 +2,10 @@
 *.log
 node_modules/
 .env
+
+# LaTeX build artifacts (CV/main.pdf is kept; aux files are not)
+*.aux
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz

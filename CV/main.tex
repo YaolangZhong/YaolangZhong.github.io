@@ -1,0 +1,262 @@
+%------------------------------------------------------------------------------
+% CV in Latex
+% Author : Charles Rambo
+% Based off of: https://github.com/sb2nov/resume and Jake's Resume on Overleaf
+% Most recently updated version may be found at https://github.com/fizixmastr 
+% License : MIT
+%------------------------------------------------------------------------------
+\documentclass[A4,11pt]{article}
+%\documentclass[letterpaper,11pt]{article} %For use in US
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,urlcolor=Violet,citecolor=Violet,linkcolor=Violet, filecolor=Violet]{hyperref}
+% \usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{tabularx,ragged2e,booktabs,caption}
+\usepackage{fontawesome5} % phone, mailbox symbol
+\usepackage{xcolor} % more colors
+\usepackage{CJKutf8}
+
+
+%-----FONT OPTIONS-------------------------------------------------------------
+
+% serif
+ \usepackage{palatino}
+% \usepackage{times} %This is the default as well
+% \usepackage{charter}
+
+% sans-serif
+% \usepackage{helvet}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+%-----PAGE SETUP---------------------------------------------------------------
+
+% Adjust margins
+%\addtolength{\oddsidemargin}{-1cm}
+%\addtolength{\evensidemargin}{-1cm}
+%\addtolength{\textwidth}{2cm}
+%\addtolength{\topmargin}{-1cm}
+%\addtolength{\textheight}{3cm}
+
+% Margins for US Letter size
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+%\addtolength{\topmargin}{-.5in}
+%\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\input{glyphtounicode}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0cm}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that .pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-----CUSTOM COMMANDS FOR FORMATTING SECTIONS----------------------------------
+\newcommand{\CVItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\CVSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \text{\small#1} & \text{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\CVSubItem}[1]{\CVItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\CVSubHeadingListStart}{\begin{itemize}[leftmargin=0.5cm, label={}]}
+% \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]} % Uncomment for US
+\newcommand{\CVSubHeadingListEnd}{\end{itemize}}
+\newcommand{\CVItemListStart}{\begin{itemize}}
+\newcommand{\CVItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+%------------------------------------------------------------------------------
+% CV STARTS HERE  %
+%------------------------------------------------------------------------------
+\begin{document}
+
+%-----HEADING------------------------------------------------------------------
+
+\begin{minipage}[c]{\textwidth}
+   
+    \centering \textbf{\Large {Yaolang Zhong}{ \Large \begin{CJK}{UTF8}{gbsn} 钟耀朗 \end{CJK}}} \\ 
+    \vspace{10pt}
+    {Graduate School of Economics, University of Tokyo, Tokyo, Japan}\\
+    {\url{https://yaolang-zhong.com/}} $|$ \faEnvelope \ \ \href{mailto:yaolang-zhong@g.ecc.u-tokyo.ac.jp}{yaolang-zhong@g.ecc.u-tokyo.ac.jp}\\
+    %\faPhone\ \small{+44 (0)7894146699} $|$ 
+    % Be sure to use a professional *personal* email address
+
+    % you should adjust you linked in profile name to be professional and recognizable
+
+\end{minipage}
+
+
+\section{\textbf{\Large{\textcolor{teal}{Employment}}}}
+\smallskip
+\centering
+Project Lecturer, Graduate School of Economics, University of Tokyo, Japan \hfill{2024-}
+
+\section{\textbf{\Large{\textcolor{teal}{Research Fields}}}}
+Econometrics, Computational Economics\hfill{}
+
+\section{\textbf{\Large{\textcolor{teal}{Research Interests}}}}
+High-dimensional Statistics, Machine Learning, Numerical Methods\hfill{}
+
+%-----EDUCATION----------------------------------------------------------------
+\section{\textbf{\Large{\textcolor{teal}{Education}}}}
+Ph.D. in Economics, University of Warwick, UK \hfill{2024}\\
+\smallskip\smallskip
+M.Res. in Economics, University of Warwick, UK (\textit{distinction}) \hfill{2020} \\
+\smallskip\smallskip
+MSc. in Economics, University of Bath, UK (\textit{distinction}) \hfill{2017}\\
+\smallskip\smallskip
+BSc. in International Trade and Economics, CUFE, China (\textit{merit}) \hfill{2016} \\
+
+
+
+\section{\textbf{\Large{\textcolor{teal}{Working papers}}}}
+\smallskip\smallskip
+\justifying
+\href{https://warwick.ac.uk/fac/soc/economics/staff/yzhong/yaolang_zhong_jmp.pdf}{``Operator Learning in Macroeconomics''} (Job market paper) \\
+\smallskip
+\noindent 
+\href{https://www.dropbox.com/scl/fi/5l8oa8l1koelb5dml5kat/Distributional_Dynami_Programming.pdf?rlkey=t461gzlcz8tx3wwnl82smwz7m&st=ua1inm5v&dl=0}{
+``Distributional Dynamic Programming in Economics''} (with \href{https://warwick.ac.uk/fac/soc/economics/staff/mchen/}{Mingli Chen})\\
+\smallskip
+\noindent ``Solving Markov Equilibrium Games by Multi-Agent Deep Reinforcement Learning''\\
+\smallskip
+\noindent \href{https://warwick.ac.uk/fac/soc/economics/staff/yzhong/child_inequality.pdf}{``The Paternal Time Investment and
+Human Capital Inequality''} (with \href{https://warwick.ac.uk/fac/soc/economics/staff/jli/}{Jiaqi Li})
+
+\section{\textbf{\Large{\textcolor{teal}{Work in Progress}}}}
+\smallskip\smallskip
+``Estimating Welfare Loss from Congestion in the Tokyo Metro Railway System'' (with Yasuyuki Sawada, Takafumi Kawakubo, Jung Hyub Lee, Tomoki Nishiyama) \\
+\smallskip
+\noindent 
+%``Transforming Poverty Monitoring for All by Integrating SWIFT and AI'' (with Yasuyuki Sawada, Yoshida Nobuo, Drew Griffen, Jung Hyub Lee, Tomoki Nishiyama) \\
+%\smallskip
+
+\section{\textbf{\Large{\textcolor{teal}{Reports}}}}
+\smallskip\smallskip
+\justifying
+\href{https://ideas.repec.org/p/zbw/i4rdps/76.html}{``Replication Report: Market-Based Monetary Policy Uncertainty''} (with \href{https://cristina-griffa.cristinagriffa.com/home}{Cristina Griffa}, \href{https://btatlow.com/}{Benjamin Tatlow} and Miquel Oliver i Vert)\\
+
+%-----WORK EXPERIENCE----------------------------------------------------------
+
+
+\section{\textbf{\Large{\textcolor{teal}{Presentations}}}}
+\smallskip\smallskip
+
+Economics Fluctuation and Growth \hfill{2024} \\
+\textit{Xiamen University, China}\\
+\smallskip
+Econometric Society Interdisciplinary Frontiers conference on Economics and AI+ML \hfill{2024} \\
+\textit{University of Cornell, US}\\
+\smallskip
+Asian Meeting of Econometrics Society \hfill{2024} \\
+\textit{Zhejiang University, China}\\
+\smallskip
+$3^{rd}$ Annual Southern Economics PhD Conference \hfill{2023} \\
+\textit{University of Sussex, UK}\\
+\smallskip
+$10^{th}$ Meeting of the Society for the Study of Economic Inequality \hfill{2023} \\
+\textit{Aix-Marseille School of Economics, France}\\
+\smallskip
+Warwick-Oxford Economics workshop \hfill{2023} \\
+\textit{University of Warwick, UK}\\
+\smallskip
+Warwick-Turing Economics and Data Science workshop \hfill{2023} \\
+\textit{University of Warwick, UK}\\
+\smallskip
+Wariwck Economics PhD forum \hfill{2022, 2021} \\
+\textit{University of Warwick, UK}
+
+\section{\textbf{\Large{\textcolor{teal}{Training}}}}
+\smallskip\smallskip
+
+{Deep Learning for Solving and Estimating Dynamic Models (online)} \hfill{2023}\\
+\smallskip
+\textit{The Econometric Society}\\
+\smallskip
+\noindent{MATH + ECON + CODE masterclasses} \hfill{2022}\\
+\smallskip
+\textit{Prof. Alfred Galichon (NYU)}\\
+\smallskip
+\noindent{Text Data in Economics} \hfill{2022}\\
+\smallskip
+\textit{Prof. Elliott Ash (ETH Zurich)}\\
+\smallskip
+\noindent{Research Software Engineering with Python} \hfill{2022}\\
+\smallskip
+\textit{Alan Turing Institute}\\
+\smallskip
+\noindent{Summer School in Economic Network} \hfill{2021}\\
+\smallskip
+\textit{University of Oxford}\\
+\smallskip
+\noindent{Camp in Computer Science Algorithms} \hfill{2018}\\
+\smallskip
+\textit{Tsinghua University}
+\smallskip\smallskip
+
+\section{\textbf{\Large{\textcolor{teal}{Programming}}}}
+{Python and Julia (Scientific Programming, Machine Learning)}\\
+\smallskip
+\noindent{Github: \href{https://github.com/YaolangZhong}{https://github.com/YaolangZhong}}\\
+
+\section{\textbf{\Large{\textcolor{teal}{Teaching Experience}}}}
+\smallskip\smallskip
+Teaching Assistant, University of Warwick \hfill{} \\
+\textbf{\textit{EC226 Econometrics 1}} \hfill{Term 2, 2021-2022} \\
+\smallskip
+Teaching Assistant, University of Warwick \hfill{} \\
+\textbf{\textit{EC220 Mathematical Economics 1A}} \hfill{Term 1, 2021-2022} 
+
+\section{\textbf{\Large{\textcolor{teal}{Personal}}}}
+Nationality: \textbf{Chinese}\hfill{}
+
+\section{\textbf{\Large{\textcolor{teal}{Scholarships and Awards}}}}
+\smallskip\smallskip
+Departmental Scholarship, Economics Department, University of Warwick \hfill{2018-2024}
+
+\section{\textbf{\Large{\textcolor{teal}{Language}}}}
+Chinese (native), Cantonese (native), English (fluent), Japanese (basic)
+
+\vspace{1cm}
+
+\hfill \noindent Lasty updated: Nov,  2024
+
+%------------------------------------------------------------------------------
+\end{document}

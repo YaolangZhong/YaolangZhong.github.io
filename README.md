@@ -13,8 +13,11 @@ Run `tree -L 2` to see the layout. Key files:
 - `assets/css/style.css` — all styling.
 - `assets/js/main.js` — mobile nav toggle + footer year.
 - `assets/img/profile.jpg` — profile photo (add this file; a "YZ" monogram shows until you do).
-- `assets/cv.pdf` — CV download (add this file to activate the CV links).
-- `CNAME` — custom domain (`yaolang-zhong.com`) for GitHub Pages.
+- `assets/cv.pdf` — CV download, generated from `CV/main.tex`.
+- `CV/main.tex` — LaTeX source of the CV; run `make` in `CV/` to rebuild + sync the PDF.
+
+> The custom domain `yaolang-zhong.com` is no longer served from this repo — it 301-forwards
+> to `yaolangzhong.github.io` at the registrar. No `CNAME` file is needed.
 
 ## Editing content
 
