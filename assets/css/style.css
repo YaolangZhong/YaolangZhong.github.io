@@ -164,6 +164,15 @@ h1, h2, h3 {
   margin: 0 0 18px;
 }
 .section-intro { color: var(--ink-soft); margin-top: 0; }
+.subhead {
+  font-size: 1.05rem;
+  margin: 26px 0 12px;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.subhead:first-of-type { margin-top: 8px; }
 
 .facts {
   list-style: none;
